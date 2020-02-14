@@ -27,7 +27,7 @@ DWORD cHook::HookFunction(LPCSTR pszModule, LPCSTR pszFuncName, LPVOID lpFunctio
 	return dwAddr;
 }
 
-BOOL cHook::UnHookFunction(LPCSTR lpModule, LPCSTR lpFuncName, unsigned char* lpBackup)
+BOOL cHook::UnHookFunction(LPCSTR lpModule, LPCSTR lpFuncName, LPBYTE lpBackup)
 {
 	HMODULE hModule = GetModuleHandleA(lpModule);
 
